@@ -1,0 +1,76 @@
+﻿@model string
+@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+    var objectConvertdModel = @Html.Raw(Model)  ;
+</script>
+
+<br>
+<br>
+<br>
+<div class="jumbotron text-center pageTitle">
+    <h1>Herbs and Spices</h1>
+    <p class="lead">Product Information</p>
+</div>
+
+<div class="accordion" id="accordionMove">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block button-color text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Grocery List Cards
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <div id="cardsContainer" class="container col-sm-12"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block button-color text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Grocery List Table 
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="table-wrapper">
+                    <table id="data" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th> Name</th>
+                                <th> Price</th>
+                                <th> Stock</th>
+                                <th> Delivery Date</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/Grid/Grid.js"></script>
+    <script>
+        $(function () {
+            RenderGrid(objectConvertdModel)
+        })
+    </script>
+
+    <script src="~/Scripts/Cards/Cards.js"></script>
+    <script>
+        $(function () {
+            RenderCards(objectConvertdModel)
+        })
+    </script>
+}
