@@ -1,12 +1,10 @@
 # HerbsAndSpices
 
-WebApplication Task Progress - Internship
-
+WebApplication Task 
 Herbs And Spices - ECommerce Shop Listing 
 
 Vasilena Georgieva 
 
-The web application was developed to match the tasks described in "Progress Task Kendo jQuery, UI for MVC and Core Internship". 
 The task was the creation of a project that presents information about products i.e. online shop. 
 
 The chosen technologies are: ASP.NET MVC, jQuery, Bootstrap 4.1.1 ASP.NET MVC was used to build the backend of the application. 
